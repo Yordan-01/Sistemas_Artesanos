@@ -1,0 +1,83 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("registrarse.jpg"); /* Fondo con textura elegante */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======== CONTENEDOR DEL FORMULARIO ======== */
+.register-container {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 15px;
+    padding: 40px 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 380px;
+    text-align: center;
+}
+
+/* ======== TÍTULO ======== */
+.register-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ======== CAMPOS ======== */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    background-color: #f9dcb8;
+    font-size: 15px;
+}
+
+/* ======== BOTÓN ======== */
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #2563eb;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #e0e0e0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #c9c9c9;
+}

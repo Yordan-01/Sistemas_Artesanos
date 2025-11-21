@@ -1,0 +1,118 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* =========================
+   DASHBOARD ADMIN
+========================= */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #1e88e5;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #1565c0;
+}
+
+.content {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #1e88e5;
+}
+
+.logout-btn {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #c62828;
+}
+
+/* =========================
+   TARJETAS Y ACCIONES
+========================= */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #1e88e5;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.acciones .card {
+    flex: 1;
+    text-align: center;
+}
+
+.acciones button {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.acciones button:hover {
+    background-color: #1565c0;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador - Sistema Artesanos</title>
+    <link rel="stylesheet" href="dashboard_admin.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Menú lateral -->
+        <div class="sidebar">
+            <h2>Administrador</h2>
+            <a href="dashboard_admin.html" class="active">🏠 Panel Principal</a>
+            <a href="GESTION_USUARIOS/usuarios.html">👥 Gestión de Usuarios</a>
+            <a href="SUBIR_DATOS/subir_datos.html">📦 Subir Datos</a>
+            <a href="../INICIO%20SESION/index.html">↩️ Cerrar Sesión</a>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <header>
+                <h1>Panel de Administración</h1>
+                <button class="logout-btn" onclick="window.location.href='../INICIO%20SESION/index.html'">Cerrar Sesión</button>
+            </header>
+
+            <section class="card">
+                <h3>👋 Bienvenido, Administrador</h3>
+                <p>Desde este panel puedes gestionar usuarios, cargar nuevos datos y controlar la información registrada.</p>
+            </section>
+
+            <section class="acciones">
+                <div class="card">
+                    <h3>👥 Gestión de Usuarios</h3>
+                    <p>Administra las cuentas de los artesanos y usuarios del sistema.</p>
+                    <button onclick="window.location.href='GESTION_USUARIOS/usuarios.html'">Ir a Gestión de Usuarios</button>
+                </div>
+
+                <div class="card">
+                    <h3>📦 Subir Datos</h3>
+                    <p>Carga nuevos registros de ventas o información relevante.</p>
+                    <button onclick="window.location.href='SUBIR_DATOS/subir_datos.html'">Ir a Subir Datos</button>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</body>
+</html>

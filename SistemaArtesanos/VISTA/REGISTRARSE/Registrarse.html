@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="styles_registrarse.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Nuevo Usuario</h2>
+
+            <form>
+                <label for="usuario">Nombre/Usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+
+                <button type="button" class="btn-register" onclick="registrarUsuario()">Registrar</button>
+
+                <button type="button" class="btn-login" onclick="window.location.href='../INICIO%20SESION/index.html'">Ir a Inicio de Sesión</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../../SRC/CONTROL/registrarse.js"></script>
+</html>

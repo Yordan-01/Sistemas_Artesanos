@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Principal - Sistema Artesanos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Menú lateral -->
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <a href="dashboard.html">🏠 Panel Principal</a>
+            <a href="PREDICCIONES/predicciones.html">📊 Predicción de Demanda</a>
+            <a href="VISUALIZACION/visualizacion.html">📈 Panel de Visualización</a>
+            <a href="../INICIO%20SESION/index.html">↩️ Cerrar Sesión</a>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <header>
+                <h1>Bienvenido al Sistema de Predicción de Demanda</h1>
+                <button class="logout-btn" onclick="window.location.href='../INICIO%20SESION/index.html'">Cerrar Sesión</button>
+            </header>
+
+            <section class="card">
+                <h3>👋 Bienvenido, Artesano</h3>
+                <p>Desde este panel puedes observar las funcionalidades disponibles que ofrece la página web.</p>
+            </section>
+
+            <section class="card">
+                <h3>📊 Funcionalidades disponibles:</h3>
+                <ul>
+                    <li><a href="PREDICCIONES/predicciones.html">Ver Predicciones de Demanda</a></li>
+                    <li><a href="VISUALIZACION/visualizacion.html">Visualizar Gráficos y Recomendaciones</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

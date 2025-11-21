@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Demanda - Sistema Artesanos</title>
+    <link rel="stylesheet" href="predicciones.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Menú lateral -->
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <a href="../dashboard.html">🏠 Panel Principal</a>
+            <a href="predicciones.html" class="active">📊 Predicción de Demanda</a>
+            <a href="../VISUALIZACION/visualizacion.html">📈 Panel de Visualización</a>
+            <a href="../../INICIO%20SESION/index.html">↩️ Cerrar Sesión</a>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <header>
+                <h1>Predicción de Demanda</h1>
+            </header>
+
+            <section class="card">
+                <h3>🔍 Consultar predicción</h3>
+                <form id="formPrediccion">
+                    <label for="producto">Seleccionar producto:</label>
+                    <select id="producto" name="producto" required>
+                        <option value="">Seleccione...</option>
+                        <option value="ceramica">Ceramica decorativa</option>
+                        <option value="textil">Textil artesanal</option>
+                        <option value="joyeria">Joyeria andina</option>
+                        <option value="madera">Tallado en madera</option>
+                    </select>
+
+                    <label for="periodo">Periodo de predicción:</label>
+                    <select id="periodo" name="periodo" required>
+                        <option value="">Seleccione...</option>
+                        <option value="1m">Próximo mes</option>
+                        <option value="3m">Próximos 3 meses</option>
+                        <option value="6m">Próximos 6 meses</option>
+                    </select>
+
+                    <button type="submit">Generar Predicción</button>
+                </form>
+            </section>
+
+            <section class="card" id="resultadoPrediccion" style="display:none;">
+                <h3>📈 Resultados de predicción</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Periodo</th>
+                            <th>Ventas Esperadas</th>
+                            <th>Tendencia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaPredicciones">
+                        <!-- Los datos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../../SRC/CONTROL/predicciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+
+            <form>
+                <label for="usuario">Nombre/Usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+
+                <label for="rol">Tipo de Usuario:</label>
+                <select id="rol" name="rol" required>
+                    <option value="" disabled selected>Seleccione un rol</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="artesano">Artesano</option>
+                </select>
+
+                <div class="botones">
+                    <button type="button" class="btn-login" onclick="redirigir()">Iniciar Sesión</button>
+                    <button type="button" class="btn-register" onclick="window.location.href='../Registrarse/Registrarse.html'">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../../SRC/CONTROL/validarUsuario.js"></script>
+</html>

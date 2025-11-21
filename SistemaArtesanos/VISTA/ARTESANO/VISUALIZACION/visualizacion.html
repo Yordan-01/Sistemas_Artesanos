@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Visualización - Sistema Artesanos</title>
+    <link rel="stylesheet" href="visualizacion.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Menú lateral -->
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <a href="../dashboard.html">🏠 Panel Principal</a>
+            <a href="../PREDICCIONES/predicciones.html">📊 Predicción de Demanda</a>
+            <a href="visualizacion.html" class="active">📈 Panel de Visualización</a>
+            <a href="../../INICIO%20SESION/index.html">↩️ Cerrar Sesión</a>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <header>
+                <h1>Panel de Visualización</h1>
+            </header>
+
+            <section class="card">
+                <h3>📊 Distribución Total de Ventas por Producto</h3>
+                <canvas id="graficoVentas"></canvas>
+            </section>
+
+            <section class="card">
+                <h3>📦 Recomendaciones de Producción</h3>
+                <table id="tablaRecomendaciones">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad Recomendada</th>
+                            <th>Motivo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../../SRC/CONTROL/visualizacion.js"></script>
+</body>
+</html>

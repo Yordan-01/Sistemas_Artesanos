@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Datos de Ventas - Sistema Artesanos</title>
+    <link rel="stylesheet" href="subir_datos.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="sidebar">
+        <h2>Administrador</h2>
+        <a href="../dashboard_admin.html">🏠 Panel Principal</a>
+        <a href="../GESTION_USUARIOS/usuarios.html">👥 Gestión de Usuarios</a>
+        <a href="subir_datos.html" class="active">📦 Subir Datos</a>
+        <a href="../../INICIO SESION/index.html">↩️ Cerrar Sesión</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Subir Datos de Ventas</h1>
+            <button class="logout-btn" onclick="window.location.href='../../INICIO SESION/index.html'">
+                Cerrar Sesión
+            </button>
+        </header>
+
+        <!-- SUBIR ARCHIVO -->
+        <section class="card">
+            <h3>📤 Cargar archivo de ventas</h3>
+
+            <form id="formSubida" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="archivo">Selecciona un archivo (.csv):</label>
+                    <input type="file" name="archivo" id="archivoCSV" accept=".csv" required>
+                </div>
+                <button type="submit">Subir Archivo</button>
+            </form>
+
+            <p id="mensaje" class="mensaje"></p>
+        </section>
+
+        <!-- HISTORIAL -->
+        <section class="card">
+            <h3>📊 Historial de archivos subidos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del Archivo</th>
+                        <th>Fecha de Subida</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaArchivos"></tbody>
+            </table>
+        </section>
+
+    </div>
+</div>
+
+<script src="/SRC/CONTROL/upload.js"></script>
+
+</body>
+</html>
