@@ -3,18 +3,18 @@ Sistema web para artesanos y administradores que permite predecir demanda, visua
 
 📁 Estructura del Proyecto
 SistemaArtesanos
-## ├── DATABASE/                # Scripts SQL y procedimientos almacenados
-# ├── LIB/                     # Librerías externas (PHP u otras)
-# ├── SRC/                     # Lógica principal (MVC)
-# │   ├── CONTROL/             # Controladores en JavaScript
-# │   └── MODELO/              # Modelos en PHP (consultas y lógica de negocio)
-# ├── VISTA/                   # Interfaces de usuario (HTML/CSS)
-# │   ├── ADMINISTRADOR/       # Módulos exclusivos del administrador
-# │   ├── ARTESANO/            # Vistas para usuarios artesanos
-# │   ├── INICIO SESION/       # Pantalla de login
-# │   └── REGISTRARSE/         # Registro de usuarios
-# ├── start_server.bat         # Script para iniciar el servidor local
-# └── ventas.csv               # Archivo de ejemplo para cargas de ventas
+###### ├── DATABASE/                # Scripts SQL y procedimientos almacenados
+###### ├── LIB/                     # Librerías externas (PHP u otras)
+###### ├── SRC/                     # Lógica principal (MVC)
+###### │   ├── CONTROL/             # Controladores en JavaScript
+###### │   └── MODELO/              # Modelos en PHP (consultas y lógica de negocio)
+###### ├── VISTA/                   # Interfaces de usuario (HTML/CSS)
+###### │   ├── ADMINISTRADOR/       # Módulos exclusivos del administrador
+###### │   ├── ARTESANO/            # Vistas para usuarios artesanos
+###### │   ├── INICIO SESION/       # Pantalla de login
+###### │   └── REGISTRARSE/         # Registro de usuarios
+###### ├── start_server.bat         # Script para iniciar el servidor local
+###### └── ventas.csv               # Archivo de ejemplo para cargas de ventas
 
 🗄️ DATABASE
 
