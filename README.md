@@ -1,9 +1,9 @@
 SistemaArtesanos
 Sistema web para artesanos y administradores que permite predecir demanda, visualizar datos, gestionar usuarios y subir registros de ventas. El proyecto sigue la arquitectura MVC (Modelo–Vista–Controlador) y utiliza PHP, JavaScript, SQL Server y archivos CSV como base de datos de entrada.
 
-#📁 Estructura del Proyecto
-#SistemaArtesanos
-# ├── DATABASE/                # Scripts SQL y procedimientos almacenados
+📁 Estructura del Proyecto
+SistemaArtesanos
+## ├── DATABASE/                # Scripts SQL y procedimientos almacenados
 # ├── LIB/                     # Librerías externas (PHP u otras)
 # ├── SRC/                     # Lógica principal (MVC)
 # │   ├── CONTROL/             # Controladores en JavaScript
