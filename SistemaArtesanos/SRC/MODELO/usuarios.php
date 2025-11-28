@@ -38,8 +38,8 @@ function registrarUsuario($input) {
         return;
     }
 
-    // 🔍 VALIDACIÓN: verificar si el usuario ya existe
-    $sqlCheck = "SELECT COUNT(*) AS total FROM usuario WHERE nombre = ?";
+    // 🔍 VALIDACIÓN: verificar si el usuario
+    $sqlCheck = "{CALL sp_VerificarUsuario(?)}";
     $paramsCheck = [$nombre];
     $stmtCheck = sqlsrv_query($conn, $sqlCheck, $paramsCheck);
 
@@ -54,7 +54,7 @@ function registrarUsuario($input) {
 
     $row = sqlsrv_fetch_array($stmtCheck, SQLSRV_FETCH_ASSOC);
 
-    if ($row["total"] > 0) {
+    if ($row["existe"] > 0) {
         echo json_encode([
             "status" => "fail",
             "message" => "El usuario ya está registrado, elija otro nombre"
