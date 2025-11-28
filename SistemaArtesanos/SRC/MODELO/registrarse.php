@@ -1,10 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
-// Importar la conexión
-require_once "conexion.php";  // <=== AQUÍ USAMOS EL PHP DE CONEXIÓN
+require_once "conexion.php";
 
-// Recibir datos JSON
 $input = json_decode(file_get_contents("php://input"), true);
 
 $nombre   = $input['usuario'] ?? '';
@@ -20,12 +18,13 @@ if (empty($nombre) || empty($password)) {
     exit;
 }
 
-// Verificar si el usuario ya existe
-$sql_check = "SELECT COUNT(*) AS total FROM usuario WHERE nombre = ?";
-$params_check = [$nombre];
-$stmt_check = sqlsrv_query($conn, $sql_check, $params_check);
+// ✅ VERIFICAR si el usuario ya existe
+$sql_verificar = "{CALL sp_VerificarUsuario(?)}";
+$params_verificar = [$nombre];
 
-if ($stmt_check === false) {
+$stmt_verificar = sqlsrv_query($conn, $sql_verificar, $params_verificar);
+
+if ($stmt_verificar === false) {
     echo json_encode([
         "status" => "error",
         "message" => "Error al validar usuario",
@@ -34,9 +33,10 @@ if ($stmt_check === false) {
     exit;
 }
 
-$row = sqlsrv_fetch_array($stmt_check, SQLSRV_FETCH_ASSOC);
+$row = sqlsrv_fetch_array($stmt_verificar, SQLSRV_FETCH_ASSOC);
 
-if ($row['total'] > 0) {
+// Verificar si el usuario ya existe
+if ($row['existe'] > 0) {
     echo json_encode([
         "status" => "fail",
         "message" => "El nombre de usuario ya existe"
@@ -44,13 +44,13 @@ if ($row['total'] > 0) {
     exit;
 }
 
-// Registrar usuario con el SP
-$sql = "{CALL sp_RegistrarUsuario(?, ?, ?)}";
-$params = [$nombre, $password, $rol];
+// ✅ REGISTRAR usuario con el SP existente
+$sql_registro = "{CALL sp_RegistrarUsuario(?, ?, ?)}";
+$params_registro = [$nombre, $password, $rol];
 
-$stmt = sqlsrv_query($conn, $sql, $params);
+$stmt_registro = sqlsrv_query($conn, $sql_registro, $params_registro);
 
-if ($stmt === false) {
+if ($stmt_registro === false) {
     echo json_encode([
         "status" => "error",
         "message" => "Error al registrar el usuario",
@@ -65,6 +65,5 @@ echo json_encode([
     "message" => "Registro exitoso. Ahora puede iniciar sesión."
 ]);
 
-// Cerrar conexión
 sqlsrv_close($conn);
 ?>
